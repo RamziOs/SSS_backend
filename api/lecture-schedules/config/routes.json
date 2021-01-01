@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/lecture-schedules",
+      "handler": "lecture-schedules.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lecture-schedules/count",
+      "handler": "lecture-schedules.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/lecture-schedules/:id",
+      "handler": "lecture-schedules.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/lecture-schedules",
+      "handler": "lecture-schedules.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/lecture-schedules/:id",
+      "handler": "lecture-schedules.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/lecture-schedules/:id",
+      "handler": "lecture-schedules.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

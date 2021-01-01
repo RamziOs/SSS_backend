@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teachers",
+  "info": {
+    "name": "teachers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "teacher_name": {
+      "type": "string",
+      "required": false
+    },
+    "teacher_email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "teacher_id": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "teacher_password": {
+      "type": "password",
+      "required": true
+    },
+    "teacher_phone_number": {
+      "type": "biginteger",
+      "required": false,
+      "unique": true
+    },
+    "teacher_address": {
+      "type": "string",
+      "required": false
+    },
+    "teacher_img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "subjects": {
+      "collection": "subjects",
+      "via": "teacher"
+    },
+    "attendence": {
+      "model": "attendences",
+      "via": "teacher"
+    }
+  }
+}

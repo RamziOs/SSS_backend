@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attendences",
+  "info": {
+    "name": "attendences",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "academic_year": {
+      "type": "enumeration",
+      "enum": [
+        "first",
+        "second",
+        "therd",
+        "fourth",
+        "five"
+      ],
+      "required": true
+    },
+    "teacher": {
+      "via": "attendence",
+      "model": "teachers"
+    },
+    "students": {
+      "collection": "students"
+    },
+    "subject": {
+      "model": "subjects",
+      "via": "attendence"
+    }
+  }
+}

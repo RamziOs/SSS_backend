@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lecture_schedules",
+  "info": {
+    "name": "lecture_schedules"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "lecture_schedules_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}
