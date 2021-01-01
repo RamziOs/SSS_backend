@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "name": "students",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "student_name": {
+      "type": "string",
+      "required": false
+    },
+    "students_email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "student_id": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "student_password": {
+      "type": "password",
+      "required": true
+    },
+    "student_division": {
+      "type": "enumeration",
+      "enum": [
+        "cs",
+        "is",
+        "it",
+        "bme"
+      ],
+      "required": false,
+      "unique": false
+    },
+    "acadimic_year": {
+      "type": "enumeration",
+      "enum": [
+        "first",
+        "scoend",
+        "therd",
+        "furth",
+        "five"
+      ],
+      "required": false
+    },
+    "student_img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "student_phone_number": {
+      "type": "biginteger",
+      "required": false,
+      "unique": true
+    },
+    "student_address": {
+      "type": "string",
+      "required": false
+    },
+    "subjects": {
+      "collection": "subjects",
+      "via": "students"
+    }
+  }
+}

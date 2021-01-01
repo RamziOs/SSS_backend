@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "name": "books"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "book_title": {
+      "type": "string",
+      "required": true,
+      "minLength": 10
+    },
+    "book_description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 40
+    },
+    "book": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

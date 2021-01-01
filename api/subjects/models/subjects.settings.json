@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "name": "subjects",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "subject_name": {
+      "type": "string",
+      "required": true
+    },
+    "teacher": {
+      "via": "subjects",
+      "model": "teachers"
+    },
+    "students": {
+      "via": "subjects",
+      "collection": "students",
+      "dominant": true
+    },
+    "attendence": {
+      "via": "subject",
+      "model": "attendences"
+    }
+  }
+}

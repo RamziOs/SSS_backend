@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "university_news",
+  "info": {
+    "name": "university_news"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "news_title": {
+      "type": "string",
+      "required": true
+    },
+    "news_description": {
+      "type": "text",
+      "required": true
+    },
+    "news_img": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

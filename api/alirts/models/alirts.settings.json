@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alirts",
+  "info": {
+    "name": "alirts",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "alirts_date": {
+      "type": "date",
+      "required": true
+    },
+    "alirts_time": {
+      "type": "time",
+      "required": true
+    },
+    "alirt": {
+      "type": "text",
+      "required": true
+    },
+    "academic_year": {
+      "type": "enumeration",
+      "enum": [
+        "first",
+        "second",
+        "therd",
+        "fourth",
+        "five"
+      ],
+      "required": true
+    }
+  }
+}
